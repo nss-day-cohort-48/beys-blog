@@ -12,7 +12,7 @@ const database = {
         },
         {
             name: "Theo",
-            bi: "I've got Bey's back",
+            bio: "I've got Bey's back",
             id: 3
         }
     ],
@@ -20,7 +20,7 @@ const database = {
     categories: []
 }
 
-const getAuthors = () => {
+export const getAuthors = () => {
     const copyOfAuthors = [...database.authors]
     return copyOfAuthors
 }
