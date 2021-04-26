@@ -31,7 +31,23 @@ const database = {
             authorId: 1,
             headline: "Creating the awesome",
             body: "Ea ut ut dolorem numquam quo quia asperiores. Voluptas sunt ducimus consequuntur fugit. Voluptas quaerat est est velit non cupiditate aut molestiae. Aut ad ut enim assumenda expedita sit maiores. Aut enim quod sunt aut non et cum sit.",
+            categoryId: 3
+        },
+        {
+            id: 3,
+            date_created: "2021-04-19",
+            authorId: 3,
+            headline: "Listening for the beat",
+            body: "Ea ut ut dolorem numquam quo quia asperiores. Voluptas sunt ducimus consequuntur fugit. Voluptas quaerat est est velit non cupiditate aut molestiae. Aut ad ut enim assumenda expedita sit maiores. Aut enim quod sunt aut non et cum sit.",
             categoryId: 2
+        },
+        {
+            id: 4,
+            date_created: "2021-04-19",
+            authorId: 3,
+            headline: "Mondays are Awesome",
+            body: "Ea ut ut dolorem numquam quo quia asperiores. Voluptas sunt ducimus consequuntur fugit. Voluptas quaerat est est velit non cupiditate aut molestiae. Aut ad ut enim assumenda expedita sit maiores. Aut enim quod sunt aut non et cum sit.",
+            categoryId: 1
         }
     ],
     categories: [

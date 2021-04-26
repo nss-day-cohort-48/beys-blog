@@ -1,17 +1,23 @@
 import { getCategories } from "./database.js"
 
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        if (clickEvent.target.id.startsWith("category")) {
+            window.alert(clickEvent.target.id)
+        }
+    }
+)
 
 export const Categories = () => {
     const categories = getCategories()
-    let allCategoriesHTML = "<ul>"
+    let allCategoriesHTML = ""
 
     for (const cat of categories) {
         allCategoriesHTML += `
-            <li>${cat.name}</li>
+            <div id="category--${cat.id}">${cat.name}</div>
         `
     }
-
-    allCategoriesHTML += "</ul>"
 
     return allCategoriesHTML
 }

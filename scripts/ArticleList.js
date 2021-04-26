@@ -8,7 +8,7 @@ export const Articles = () => {
     for (const article of allArticles) {
         fullArticles += `
             <div class="article">
-                <h3 class="article__headline">${ article.headline }</h3>
+                <div class="article__headline">${ article.headline }</div>
             </div>
         `
     }
