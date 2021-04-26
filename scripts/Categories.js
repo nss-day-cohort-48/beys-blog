@@ -1,10 +1,36 @@
-import { getCategories } from "./database.js"
+import { getArticles, getCategories } from "./database.js"
 
 document.addEventListener(
     "click",
     (clickEvent) => {
         if (clickEvent.target.id.startsWith("category")) {
-            window.alert(clickEvent.target.id)
+            const [, categoryId] = clickEvent.target.id.split("--")
+            const categoryIdNumber = parseInt(categoryId)  // 2
+
+            const articles = getArticles()
+            const articleMatches = []
+
+
+            const matchingArticlesArray = articles.filter(
+                (article) => {
+                    return article.categoryId === categoryIdNumber
+                }
+            )
+
+            const articleHeadlines = matchingArticlesArray.map(
+                (articleObject) => {
+                    return articleObject.headline
+                }
+            )
+
+            // for (const article of articles) {
+            //     if (article.categoryId === categoryIdNumber) {
+            //         articleMatches.push(article.headline)
+            //     }
+            // }
+
+
+            window.alert(`${ articleHeadlines.join("\n 🧜🏽‍♀🧜🏽‍♀🧜🏽‍♀🧜🏽‍♀🧜🏽‍♀🧜🏽‍♀🧜🏽‍♀ \n") }`)
         }
     }
 )
